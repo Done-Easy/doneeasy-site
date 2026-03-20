@@ -10,48 +10,61 @@
       font-family: 'Segoe UI', sans-serif;
       background:#F8F9FB;
       color:#0F2A3D;
-      text-align:center;
     }
 
     header {
-      padding:60px 20px;
       background:white;
+      padding:20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
     }
 
     .logo {
-      width:110px;
+      width:90px;
     }
 
-    h1 {
-      margin:10px 0;
-      font-size:32px;
+    .hero {
+      padding:50px 20px;
+      text-align:center;
     }
 
-    .tagline {
-      color:gray;
-      margin-bottom:15px;
+    .hero h1 {
+      font-size:28px;
+      margin-bottom:10px;
     }
 
     .btn {
       background:#E56A2E;
       color:white;
       padding:14px 24px;
-      text-decoration:none;
       border-radius:8px;
-      font-weight:600;
+      text-decoration:none;
       display:inline-block;
-      margin-top:10px;
+      margin-top:15px;
+    }
+
+    .search-box {
+      margin-top:20px;
+    }
+
+    input {
+      padding:12px;
+      width:80%;
+      max-width:400px;
+      border-radius:8px;
+      border:1px solid #ddd;
     }
 
     section {
-      padding:50px 20px;
+      padding:40px 20px;
     }
 
-    .cards {
-      display:flex;
-      flex-direction:column;
+    .grid {
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
       gap:15px;
-      max-width:400px;
+      max-width:500px;
       margin:auto;
     }
 
@@ -59,25 +72,21 @@
       background:white;
       padding:20px;
       border-radius:10px;
+      text-align:center;
       box-shadow:0 5px 15px rgba(0,0,0,0.05);
     }
 
-    input {
-      padding:10px;
-      width:80%;
-      max-width:300px;
-      margin:5px 0;
-      border:1px solid #ddd;
-      border-radius:6px;
+    .trust {
+      text-align:center;
     }
 
     footer {
+      text-align:center;
       padding:20px;
-      font-size:14px;
       color:gray;
     }
 
-    .whatsapp-float {
+    .whatsapp {
       position:fixed;
       bottom:20px;
       right:20px;
@@ -86,7 +95,6 @@
       padding:15px;
       border-radius:50%;
       text-decoration:none;
-      font-size:20px;
     }
 
   </style>
@@ -96,77 +104,69 @@
 
 <header>
   <img src="logo.png" class="logo">
-
-  <h1>DoneEasy</h1>
-  <p class="tagline">Your Ease. Done Right.</p>
-
-  <a class="btn" href="https://wa.me/919772125109?text=Hi%20I%20want%20to%20book%20a%20task">
-    Book on WhatsApp
-  </a>
-
-  <p>⚡ Fast response within minutes | Available 9 AM – 9 PM</p>
+  <a href="https://wa.me/919772125109?text=Hi%20I%20want%20to%20book%20a%20task">Contact</a>
 </header>
 
+<div class="hero">
+  <h1>Your daily tasks, handled instantly</h1>
+  <p>Errands • Digital Help • Gifting</p>
+
+  <div class="search-box">
+    <input placeholder="What do you need help with?">
+  </div>
+
+  <a class="btn" href="https://wa.me/919772125109?text=Hi%20I%20want%20to%20book%20a%20task">
+    Book Service
+  </a>
+
+  <p>⚡ Fast response | Jaipur based service</p>
+</div>
+
 <section>
-  <h2>What We Do</h2>
-  <div class="cards">
-    <div class="card">📦 Daily Errands</div>
-    <div class="card">💻 Digital Assistance</div>
-    <div class="card">🎁 Gifting & Surprises</div>
+  <h2 style="text-align:center;">Our Services</h2>
+
+  <div class="grid">
+    <div class="card">📦 Errands</div>
+    <div class="card">💻 Digital Help</div>
+    <div class="card">🎁 Gifting</div>
+    <div class="card">🚚 Pickup & Drop</div>
   </div>
 </section>
 
-<section>
-  <h2>How It Works</h2>
-  <p>1. Message us on WhatsApp</p>
-  <p>2. Get instant confirmation</p>
-  <p>3. Sit back, we handle it</p>
+<section class="trust">
+  <h2>Why Choose DoneEasy?</h2>
+  <p>✔ Trusted local service</p>
+  <p>✔ Fast turnaround</p>
+  <p>✔ Affordable pricing</p>
 </section>
 
 <section>
-  <h2>Pricing</h2>
-  <div class="cards">
-    <div class="card">📦 Errands – Starting ₹49</div>
-    <div class="card">💻 Digital Work – Starting ₹79</div>
-    <div class="card">🎁 Gifting – Custom Pricing</div>
+  <h2 style="text-align:center;">How It Works</h2>
+  <p style="text-align:center;">1. Tell us your task</p>
+  <p style="text-align:center;">2. Get instant quote</p>
+  <p style="text-align:center;">3. Relax, we handle it</p>
+</section>
+
+<section>
+  <h2 style="text-align:center;">Pricing</h2>
+  <div class="grid">
+    <div class="card">From ₹99</div>
+    <div class="card">Transparent pricing</div>
   </div>
 </section>
 
-<section>
-  <h2>Who is this for?</h2>
-  <p>✔ Busy students</p>
-  <p>✔ Working professionals</p>
-  <p>✔ Anyone who needs quick help</p>
-</section>
-
-<section>
-  <h2>What People Say</h2>
-  <div class="cards">
-    <div class="card">“Super fast service! Saved me hours.”</div>
-    <div class="card">“Very reliable and easy to use.”</div>
-  </div>
-</section>
-
-<section>
-  <h2>Request a Task</h2>
-
-  <form name="contact" method="POST" data-netlify="true" action="/success.html">
-    
-    <input type="hidden" name="form-name" value="contact">
-
-    <input type="text" name="name" placeholder="Your Name" required><br>
-    <input type="text" name="task" placeholder="What do you need?" required><br>
-
-    <button type="submit" class="btn">Submit</button>
-  </form>
-
+<section style="text-align:center;">
+  <h2>Ready to get things done?</h2>
+  <a class="btn" href="https://wa.me/919772125109?text=Hi%20I%20want%20to%20book%20a%20task">
+    Get Started
+  </a>
 </section>
 
 <footer>
   © DoneEasy | Jaipur
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/919772125109?text=Hi%20I%20want%20to%20book%20a%20task">
+<a class="whatsapp" href="https://wa.me/919772125109?text=Hi%20I%20want%20to%20book%20a%20task">
 💬
 </a>
 
