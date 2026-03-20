@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #F5F7FA;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: white;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+}
+
+.hero input {
+  padding: 15px;
+  width: 300px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.hero button {
+  padding: 15px 25px;
+  background: #E56A2E;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* SERVICES */
+.services {
+  padding: 50px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* SECTIONS */
+.how, .why {
+  padding: 40px;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: gray;
+}

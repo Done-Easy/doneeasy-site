@@ -1,174 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>DoneEasy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin:0;
-      font-family: 'Segoe UI', sans-serif;
-      background:#F8F9FB;
-      color:#0F2A3D;
-    }
-
-    header {
-      background:white;
-      padding:20px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-
-    .logo {
-      width:90px;
-    }
-
-    .hero {
-      padding:50px 20px;
-      text-align:center;
-    }
-
-    .hero h1 {
-      font-size:28px;
-      margin-bottom:10px;
-    }
-
-    .btn {
-      background:#E56A2E;
-      color:white;
-      padding:14px 24px;
-      border-radius:8px;
-      text-decoration:none;
-      display:inline-block;
-      margin-top:15px;
-    }
-
-    .search-box {
-      margin-top:20px;
-    }
-
-    input {
-      padding:12px;
-      width:80%;
-      max-width:400px;
-      border-radius:8px;
-      border:1px solid #ddd;
-    }
-
-    section {
-      padding:40px 20px;
-    }
-
-    .grid {
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:15px;
-      max-width:500px;
-      margin:auto;
-    }
-
-    .card {
-      background:white;
-      padding:20px;
-      border-radius:10px;
-      text-align:center;
-      box-shadow:0 5px 15px rgba(0,0,0,0.05);
-    }
-
-    .trust {
-      text-align:center;
-    }
-
-    footer {
-      text-align:center;
-      padding:20px;
-      color:gray;
-    }
-
-    .whatsapp {
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      color:white;
-      padding:15px;
-      border-radius:50%;
-      text-decoration:none;
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png" class="logo">
-  <a href="https://wa.me/919772125109?text=Hi%20I%20want%20to%20book%20a%20task">Contact</a>
-</header>
-
-<div class="hero">
-  <h1>Your daily tasks, handled instantly</h1>
-  <p>Errands • Digital Help • Gifting</p>
-
-  <div class="search-box">
-    <input placeholder="What do you need help with?">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2>DoneEasy</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
   </div>
+</nav>
 
-  <a class="btn" href="https://wa.me/919772125109?text=Hi%20I%20want%20to%20book%20a%20task">
-    Book Service
-  </a>
+<!-- HERO -->
+<section class="hero">
+  <h1>Your daily tasks, handled instantly</h1>
+  <p>Errands • Digital Help • Gifting • Pickup & Drop</p>
 
-  <p>⚡ Fast response | Jaipur based service</p>
-</div>
+  <input id="taskInput" placeholder="What do you need help with?">
+  <button onclick="handleTask()">Book Service</button>
+</section>
 
-<section>
-  <h2 style="text-align:center;">Our Services</h2>
+<!-- SERVICES -->
+<section class="services">
+  <h2>Our Services</h2>
 
   <div class="grid">
     <div class="card">📦 Errands</div>
     <div class="card">💻 Digital Help</div>
     <div class="card">🎁 Gifting</div>
     <div class="card">🚚 Pickup & Drop</div>
+    <div class="card">🤝 Personal Help</div>
+    <div class="card">📄 Documentation Help</div>
   </div>
 </section>
 
-<section class="trust">
-  <h2>Why Choose DoneEasy?</h2>
-  <p>✔ Trusted local service</p>
-  <p>✔ Fast turnaround</p>
+<!-- HOW IT WORKS -->
+<section class="how">
+  <h2>How It Works</h2>
+  <p>1. Enter your task</p>
+  <p>2. Get instant response</p>
+  <p>3. Relax, we handle it</p>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <h2>Why DoneEasy?</h2>
+  <p>✔ Fast response</p>
+  <p>✔ Reliable service</p>
   <p>✔ Affordable pricing</p>
 </section>
 
-<section>
-  <h2 style="text-align:center;">How It Works</h2>
-  <p style="text-align:center;">1. Tell us your task</p>
-  <p style="text-align:center;">2. Get instant quote</p>
-  <p style="text-align:center;">3. Relax, we handle it</p>
-</section>
-
-<section>
-  <h2 style="text-align:center;">Pricing</h2>
-  <div class="grid">
-    <div class="card">From ₹99</div>
-    <div class="card">Transparent pricing</div>
-  </div>
-</section>
-
-<section style="text-align:center;">
-  <h2>Ready to get things done?</h2>
-  <a class="btn" href="https://wa.me/919772125109?text=Hi%20I%20want%20to%20book%20a%20task">
-    Get Started
-  </a>
-</section>
-
+<!-- FOOTER -->
 <footer>
-  © DoneEasy | Jaipur
+  <p>© DoneEasy | Jaipur</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919772125109?text=Hi%20I%20want%20to%20book%20a%20task">
-💬
-</a>
+<script src="index.js"></script>
 
 </body>
 </html>
