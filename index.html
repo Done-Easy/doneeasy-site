@@ -1,78 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>DoneEasy - Your Tasks, Done Instantly</title>
+  <meta charset="UTF-8">
+  <title>DoneEasy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin:0;
-      font-family: Arial;
-      background:#F5F7FA;
-      color:#1A1A1A;
-    }
-
-    nav {
-      display:flex;
-      justify-content:space-between;
-      padding:20px 40px;
-      background:white;
-    }
-
-    nav a {
-      margin-left:20px;
-      text-decoration:none;
-      color:black;
-    }
-
-    .hero {
-      text-align:center;
-      padding:100px 20px;
-    }
-
-    .hero h1 {
-      font-size:40px;
-    }
-
-    .btn {
-      background:#E56A2E;
-      color:white;
-      padding:15px 25px;
-      border:none;
-      border-radius:8px;
-      margin-top:20px;
-      cursor:pointer;
-    }
-
-    section {
-      padding:60px 20px;
-      text-align:center;
-    }
-
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:20px;
-      max-width:800px;
-      margin:auto;
-    }
-
-    .card {
-      background:white;
-      padding:25px;
-      border-radius:10px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.05);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
+<!-- NAVBAR -->
+<nav class="navbar">
   <h2>DoneEasy</h2>
   <div>
-    <a href="#">About</a>
+    <a href="#">Home</a>
     <a href="#">Services</a>
+    <a href="#">About</a>
     <a href="#">Contact</a>
   </div>
 </nav>
@@ -80,31 +24,15 @@
 <!-- HERO -->
 <section class="hero">
   <h1>Your daily tasks, handled instantly</h1>
-  <p>We help people outsource everyday work — errands, digital tasks, and personal help.</p>
-  <button class="btn">Get Started</button>
-</section>
+  <p>Errands • Digital Help • Gifting • Pickup & Drop</p>
 
-<!-- PROBLEM -->
-<section>
-  <h2>The Problem</h2>
-  <p>
-    People struggle with small but time-consuming tasks — running errands, handling digital work,
-    managing daily responsibilities. These tasks create stress and reduce productivity.
-  </p>
-</section>
-
-<!-- SOLUTION -->
-<section>
-  <h2>Our Solution</h2>
-  <p>
-    DoneEasy is a hyperlocal task execution platform that allows users to outsource
-    any task instantly — from errands to digital help — with fast response and reliable service.
-  </p>
+  <input id="taskInput" placeholder="What do you need help with?">
+  <button onclick="handleTask()">Book Service</button>
 </section>
 
 <!-- SERVICES -->
-<section>
-  <h2>What We Offer</h2>
+<section class="services">
+  <h2>Our Services</h2>
 
   <div class="grid">
     <div class="card">📦 Errands</div>
@@ -116,45 +44,28 @@
   </div>
 </section>
 
-<!-- MARKET -->
-<section>
-  <h2>Market Opportunity</h2>
-  <p>
-    The on-demand service market in India is rapidly growing, driven by urban lifestyles,
-    time constraints, and increasing digital adoption. DoneEasy targets a large and expanding
-    hyperlocal service economy.
-  </p>
+<!-- HOW IT WORKS -->
+<section class="how">
+  <h2>How It Works</h2>
+  <p>1. Enter your task</p>
+  <p>2. Get instant response</p>
+  <p>3. Relax, we handle it</p>
 </section>
 
-<!-- BUSINESS MODEL -->
-<section>
-  <h2>Business Model</h2>
-  <p>
-    DoneEasy earns through service commissions, premium task handling, and subscription-based
-    convenience plans for frequent users.
-  </p>
-</section>
-
-<!-- WHY US -->
-<section>
+<!-- WHY -->
+<section class="why">
   <h2>Why DoneEasy?</h2>
-  <div class="grid">
-    <div class="card">⚡ Fast Response</div>
-    <div class="card">📍 Hyperlocal Focus</div>
-    <div class="card">💰 Affordable Pricing</div>
-  </div>
+  <p>✔ Fast response</p>
+  <p>✔ Reliable service</p>
+  <p>✔ Affordable pricing</p>
 </section>
 
-<!-- CTA -->
-<section>
-  <h2>Join Us Early</h2>
-  <p>We are building the future of everyday task outsourcing.</p>
-  <button class="btn">Contact Us</button>
-</section>
-
-<footer style="text-align:center; padding:20px; color:gray;">
-  © DoneEasy | Jaipur
+<!-- FOOTER -->
+<footer>
+  <p>© DoneEasy | Jaipur</p>
 </footer>
+
+<script src="index.js"></script>
 
 </body>
 </html>
