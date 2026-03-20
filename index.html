@@ -5,13 +5,119 @@
   <title>DoneEasy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #F5F7FA;
+      color: #1A1A1A;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .hero p {
+      margin-top: 15px;
+      color: #555;
+      font-size: 18px;
+    }
+
+    .btn {
+      background: #E56A2E;
+      color: white;
+      padding: 15px 28px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 25px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 40px;
+    }
+
+    .stat h2 {
+      color: #E56A2E;
+      margin: 0;
+    }
+
+    .testimonial {
+      max-width: 600px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: gray;
+    }
+
+    @media(max-width:768px){
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .stats {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
+<nav>
   <h2>DoneEasy</h2>
   <div>
     <a href="#">Home</a>
@@ -23,49 +129,91 @@
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Your daily tasks, handled instantly</h1>
-  <p>Errands • Digital Help • Gifting • Pickup & Drop</p>
+  <h1>Outsource Your Daily Tasks, Instantly</h1>
+  <p>DoneEasy helps you get errands, digital work, and personal tasks done — fast and reliably.</p>
 
-  <input id="taskInput" placeholder="What do you need help with?">
-  <button onclick="handleTask()">Book Service</button>
+  <a href="https://wa.me/919772125109?text=Hi%2C%20I%20would%20like%20to%20book%20a%20service%20with%20DoneEasy" target="_blank">
+    <button class="btn">Book a Task</button>
+  </a>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <h2>100+</h2>
+      <p>Tasks Completed</p>
+    </div>
+    <div class="stat">
+      <h2>50+</h2>
+      <p>Happy Users</p>
+    </div>
+    <div class="stat">
+      <h2>10+</h2>
+      <p>Service Categories</p>
+    </div>
+  </div>
 </section>
 
 <!-- SERVICES -->
-<section class="services">
-  <h2>Our Services</h2>
+<section>
+  <h2>What We Do</h2>
 
   <div class="grid">
     <div class="card">📦 Errands</div>
     <div class="card">💻 Digital Help</div>
     <div class="card">🎁 Gifting</div>
     <div class="card">🚚 Pickup & Drop</div>
-    <div class="card">🤝 Personal Help</div>
+    <div class="card">🤝 Personal Assistance</div>
     <div class="card">📄 Documentation Help</div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="how">
+<!-- USE CASES -->
+<section>
+  <h2>Real Use Cases</h2>
+  <div class="grid">
+    <div class="card">Get groceries delivered</div>
+    <div class="card">Send gifts to loved ones</div>
+    <div class="card">Handle online bookings</div>
+    <div class="card">Pickup & drop items</div>
+    <div class="card">Queue standing services</div>
+    <div class="card">Daily personal tasks</div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section>
   <h2>How It Works</h2>
-  <p>1. Enter your task</p>
-  <p>2. Get instant response</p>
-  <p>3. Relax, we handle it</p>
+  <p>1. Click “Book a Task”</p>
+  <p>2. Tell us your requirement</p>
+  <p>3. We execute it for you</p>
 </section>
 
-<!-- WHY -->
-<section class="why">
-  <h2>Why DoneEasy?</h2>
-  <p>✔ Fast response</p>
-  <p>✔ Reliable service</p>
-  <p>✔ Affordable pricing</p>
+<!-- TESTIMONIALS -->
+<section>
+  <h2>What Users Say</h2>
+
+  <div class="testimonial">
+    “Saved me hours! Got my work done without stepping out.”
+  </div>
+
+  <div class="testimonial">
+    “Super reliable and quick. Perfect for busy schedules.”
+  </div>
+
 </section>
 
-<!-- FOOTER -->
+<!-- CTA -->
+<section>
+  <h2>Start Saving Time Today</h2>
+
+  <a href="https://wa.me/919772125109?text=Hi%2C%20I%20would%20like%20to%20book%20a%20service%20with%20DoneEasy" target="_blank">
+    <button class="btn">Get Started</button>
+  </a>
+</section>
+
 <footer>
-  <p>© DoneEasy | Jaipur</p>
+  © DoneEasy | Jaipur
 </footer>
-
-<script src="index.js"></script>
 
 </body>
 </html>
