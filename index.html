@@ -149,11 +149,17 @@
 
 <section>
   <h2>Request a Task</h2>
-  <form name="contact" method="POST" data-netlify="true">
+
+  <form name="contact" method="POST" data-netlify="true" action="/success.html">
+    
+    <input type="hidden" name="form-name" value="contact">
+
     <input type="text" name="name" placeholder="Your Name" required><br>
     <input type="text" name="task" placeholder="What do you need?" required><br>
+
     <button type="submit" class="btn">Submit</button>
   </form>
+
 </section>
 
 <footer>
