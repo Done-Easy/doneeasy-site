@@ -3,24 +3,23 @@
 <head>
   <title>DoneEasy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <style>
     body {
       margin:0;
       font-family: 'Segoe UI', sans-serif;
       background:#F8F9FB;
       color:#0F2A3D;
+      text-align:center;
     }
 
     header {
       padding:60px 20px;
-      text-align:center;
       background:white;
     }
 
     .logo {
-      width:120px;
-      margin-bottom:10px;
+      width:110px;
     }
 
     h1 {
@@ -30,7 +29,7 @@
 
     .tagline {
       color:gray;
-      margin-bottom:20px;
+      margin-bottom:15px;
     }
 
     .btn {
@@ -41,11 +40,11 @@
       border-radius:8px;
       font-weight:600;
       display:inline-block;
+      margin-top:10px;
     }
 
     section {
       padding:50px 20px;
-      text-align:center;
     }
 
     .cards {
@@ -63,36 +62,53 @@
       box-shadow:0 5px 15px rgba(0,0,0,0.05);
     }
 
-    .steps p {
-      margin:8px 0;
+    input {
+      padding:10px;
+      width:80%;
+      max-width:300px;
+      margin:5px 0;
+      border:1px solid #ddd;
+      border-radius:6px;
     }
 
     footer {
       padding:20px;
-      text-align:center;
       font-size:14px;
       color:gray;
     }
+
+    .whatsapp-float {
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:white;
+      padding:15px;
+      border-radius:50%;
+      text-decoration:none;
+      font-size:20px;
+    }
+
   </style>
 </head>
 
 <body>
 
 <header>
-  <!-- Replace with your uploaded logo URL later -->
   <img src="logo.png" class="logo">
 
   <h1>DoneEasy</h1>
   <p class="tagline">Your Ease. Done Right.</p>
 
-  <a class="btn" href="https://wa.me/919772125109?text=Hi%20I%20need%20help%20with%20a%20task">
+  <a class="btn" href="https://wa.me/919772125109?text=Hi%20I%20want%20to%20book%20a%20task">
     Book on WhatsApp
   </a>
+
+  <p>⚡ Fast response within minutes | Available 9 AM – 9 PM</p>
 </header>
 
 <section>
   <h2>What We Do</h2>
-
   <div class="cards">
     <div class="card">📦 Daily Errands</div>
     <div class="card">💻 Digital Assistance</div>
@@ -100,7 +116,7 @@
   </div>
 </section>
 
-<section class="steps">
+<section>
   <h2>How It Works</h2>
   <p>1. Message us on WhatsApp</p>
   <p>2. Get instant confirmation</p>
@@ -108,21 +124,45 @@
 </section>
 
 <section>
-  <h2>Why Choose DoneEasy?</h2>
-  <p>⚡ Fast Response</p>
-  <p>🤝 Reliable Service</p>
-  <p>📍 Local Jaipur Team</p>
+  <h2>Pricing</h2>
+  <div class="cards">
+    <div class="card">📦 Errands – Starting ₹49</div>
+    <div class="card">💻 Digital Work – Starting ₹79</div>
+    <div class="card">🎁 Gifting – Custom Pricing</div>
+  </div>
+</section>
 
-  <br>
+<section>
+  <h2>Who is this for?</h2>
+  <p>✔ Busy students</p>
+  <p>✔ Working professionals</p>
+  <p>✔ Anyone who needs quick help</p>
+</section>
 
-  <a class="btn" href="https://wa.me/919772125109?text=Hi%20I%20need%20help%20with%20a%20task">
-    Get Started
-  </a>
+<section>
+  <h2>What People Say</h2>
+  <div class="cards">
+    <div class="card">“Super fast service! Saved me hours.”</div>
+    <div class="card">“Very reliable and easy to use.”</div>
+  </div>
+</section>
+
+<section>
+  <h2>Request a Task</h2>
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="text" name="name" placeholder="Your Name" required><br>
+    <input type="text" name="task" placeholder="What do you need?" required><br>
+    <button type="submit" class="btn">Submit</button>
+  </form>
 </section>
 
 <footer>
   © DoneEasy | Jaipur
 </footer>
+
+<a class="whatsapp-float" href="https://wa.me/919772125109?text=Hi%20I%20want%20to%20book%20a%20task">
+💬
+</a>
 
 </body>
 </html>
